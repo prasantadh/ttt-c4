@@ -13,7 +13,13 @@ def swapplayer():
         return 'X'
 
 def checkwinner():
-    if (board[x][0] == board[x][1] == board[x][2] ==player):
+    if (board[0][0] == board[0][1] == board[0][2] ==player):
+        return True
+
+    if (board[1][0] == board[1][1] == board[1][2] ==player):
+        return True
+
+    if (board[2][0] == board[2][1] == board[2][2] ==player):
         return True
 
     if (board[0][0] == board[1][0] == board[2][0] == player):
@@ -40,7 +46,7 @@ def printboard():
     print('1 | {} | {} | {} '.format(board[1][0], board[1][1], board[1][2] ))
     print('2 | {} | {} | {} '.format(board[2][0], board[2][1], board[2][2] ))
 
-choice = 'y'
+choice = input("enter y to play: ")
 while choice == 'y':
     printboard()
     print("Current player: ", player)
@@ -59,13 +65,6 @@ while choice == 'y':
     if checkwinner() == True:
         printboard()
         board.clear()
-
-        board = [
-                    [' ', ' ', ' '],
-                    [' ', ' ', ' '],
-                    [' ', ' ', ' ']
-                ]
-
         print(player, " WON!")
         choice = input("enter y to play: ")
     player = swapplayer()
