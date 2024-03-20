@@ -13,14 +13,9 @@ def swapplayer():
         return 'X'
 
 def checkwinner():
-    if (board[0][0] == board[0][1] == board[0][2] ==player):
+    if (board[x][0] == board[x][1] == board[x][2] ==player):
         return True
 
-    if (board[1][0] == board[1][1] == board[1][2] ==player):
-        return True
-
-    if (board[2][0] == board[2][1] == board[2][2] ==player):
-        return True
 
     if (board[0][0] == board[1][0] == board[2][0] == player):
         return True
