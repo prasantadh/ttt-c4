@@ -65,6 +65,13 @@ while choice == 'y':
     if checkwinner() == True:
         printboard()
         board.clear()
+
+        board = [
+                    [' ', ' ', ' '],
+                    [' ', ' ', ' '],
+                    [' ', ' ', ' ']
+                ]
+
         print(player, " WON!")
         choice = input("enter y to play: ")
     player = swapplayer()
