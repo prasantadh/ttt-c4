@@ -46,7 +46,7 @@ def printboard():
     print('1 | {} | {} | {} '.format(board[1][0], board[1][1], board[1][2] ))
     print('2 | {} | {} | {} '.format(board[2][0], board[2][1], board[2][2] ))
 
-choice = input("enter y to play: ")
+choice = 'y'
 while choice == 'y':
     printboard()
     print("Current player: ", player)
